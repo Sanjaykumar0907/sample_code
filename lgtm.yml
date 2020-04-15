@@ -111,8 +111,8 @@ extraction:
     #   # The `packages` section is valid for LGTM.com only. It names Ubuntu packages to
     #   # be installed.
     #   packages:
-    #     - libxml2-dev
-    #     - libxslt1-dev
+         - g++-6
+    #    - libxslt1-dev
     # Add an `after-prepare` step if you need to run commands after the prepare step.
     # Each command should be listed on a separate line.
     # This step is useful for C/C++ analysis where you want to prepare the environment
