@@ -24,5 +24,4 @@ extraction:
         #- ./prepare_deps
     index: 
       build_command: 
-        - "$GNU_MAKE -j2 -s"
-
+        - "make"
