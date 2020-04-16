@@ -1,0 +1,36 @@
+#make file - this is a comment section
+
+#CC=/volume/hab/Linux/Ubuntu-12.04/x86_64/gcc/jnpr/4.2.1/x86_64-unknown-linux-gnu.11/bin/gcc
+all:
+	gcc -c \
+        sample_uninit.c \
+        sample_bad_compare.c \
+        sample_bad_free.c \
+        sample_bad_sizeof.c \
+        sample_buffer_size_warning.c \
+        sample_constant_expr.c \
+        sample_constant_expr_1.c \
+        sample_constant_expr_new.c \
+        sample_custom_string_checkers.c \
+        sample_file_handle.c \
+        sample_fnptr.c \
+        sample_forward_null.c \
+        sample_forward_null.cpp \
+        sample_forward_null_klock.c \
+        sample_getwd.c \
+        sample_integer_overflow.c \
+        sample_memory_leak.c \
+        sample_overrun.c \
+        sample_overrun_buffer_klock.c \
+        sample_overrun_in_for_loop.c \
+        sample_return_local.c \
+        sample_sign_extension.c \
+        sample_uninit.c \
+        sample_uninit.c \
+        sample_uninit.c \
+        sample_uninit.c \
+        sample_uninit.c \
+        sample_uninit.c \
+        sample_uninit.c 
+clean:
+	rm -rf *.o
