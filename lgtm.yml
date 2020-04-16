@@ -3,11 +3,21 @@ extraction:
     after_prepare: 
       - "export GNU_MAKE=make"
       - "export GIT=true"
+    
     configure: 
       command: 
-        - $PWD
+        #- ./prepare_deps
     index: 
       build_command: 
-        - make
-    packages: 
-      - g++
+        - "$GNU_MAKE -j2 -s"
+    prepare: 
+      packages: 
+        - g++
+path_classifiers: 
+  docs: 
+    #- generate_javadoc.py
+  test: 
+    #- "*/*/test_*.cpp"
+queries: 
+  - 
+    exclude: cpp/use-of-goto
