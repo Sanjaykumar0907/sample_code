@@ -5,6 +5,9 @@ path_classifiers:
     #- "*/*/test_*.cpp"
 queries: 
     - exclude: cpp/use-of-goto
+    - include: cpp/array-arg-size-mismatch
+    - include: cpp/new-free-mismatch
+    - include: cpp/overflow-calculated
 extraction: 
   cpp: 
     prepare: 
