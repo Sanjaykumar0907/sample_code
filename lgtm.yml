@@ -1,27 +1,13 @@
 extraction: 
-  # Define settings for C/C++ analysis
-  #####################################
-  cpp:
-    # The `prepare` step exists for customization on LGTM.com only.
-    # prepare:
-    #   # The `packages` section is valid for LGTM.com only. It names Ubuntu packages to
-    #   # be installed.
-    #   packages:
-         - g++
-
-    after_prepare:
-      - export GNU_MAKE=make
-      - export GIT=true
-    # The `configure` step generates build configuration files which the `index` step
-    # then uses to build the codebase.
-    configure:
-      command:
-        #- ./prepare_deps
- 
-    # The `index` step builds the code and extracts information during the build
-    # process.
-    index:
-      # Override the autobuild process by specifying a list of custom build commands
-      # to use instead. 
-      build_command:
-        - make 
+  cpp: 
+    after_prepare: 
+      - "export GNU_MAKE=make"
+      - "export GIT=true"
+    configure: 
+      command: 
+        - $PWD
+    index: 
+      build_command: 
+        - make
+    packages: 
+      - g++
