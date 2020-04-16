@@ -1,24 +1,25 @@
-extraction: 
-  cpp: 
-    after_prepare: 
-      - "export GNU_MAKE=make"
-      - "export GIT=true"
-      - "export CXX=gcc"
-    
-    configure: 
-      command: 
-        #- ./prepare_deps
-    index: 
-      build_command: 
-        - "$GNU_MAKE -j2 -s"
-    prepare: 
-      packages: 
-        - g++
 path_classifiers: 
   docs: 
     #- generate_javadoc.py
   test: 
     #- "*/*/test_*.cpp"
 queries: 
-  - 
-    exclude: cpp/use-of-goto
+    - exclude: cpp/use-of-goto
+extraction: 
+  cpp: 
+    prepare: 
+      packages: 
+        - g++
+    after_prepare: 
+      - "export GNU_MAKE=make"
+      - "export GIT=true"
+      - "export CXX=gcc" 
+    configure: 
+      command: 
+        - "echo $PWD"
+        - "cat Makefile"
+        #- ./prepare_deps
+    index: 
+      build_command: 
+        - "$GNU_MAKE -j2 -s"
+
