@@ -1,0 +1,4 @@
+queries:
+  - include: cpp/use-of-goto
+  - include: cpp/overrunning-write
+  - include: cpp/tainted-format-string
